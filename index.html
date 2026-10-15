@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Our Cute World 💕</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.min.js"></script>
+</head>
+<body>
+  <!-- Login -->
+  <div id="login-screen">
+    <div class="login-card">
+      <div class="logo">💕</div>
+      <h1>Our Cute World</h1>
+      <p>A private little universe just for us</p>
+      
+      <input id="name-input" type="text" placeholder="Your name" maxlength="16" />
+      <input id="password-input" type="password" placeholder="Secret password" />
+      
+      <div class="color-row">
+        <span>Avatar color</span>
+        <input type="color" id="color-input" value="#ff6b9d" />
+      </div>
+      
+      <button id="join-btn">Enter World ✨</button>
+      <p id="login-error"></p>
+    </div>
+  </div>
+
+  <!-- Game UI -->
+  <div id="game-ui" class="hidden">
+    <!-- Top HUD -->
+    <div id="top-hud">
+      <div id="score-badge">Hearts: <span id="score-value">0</span> 💖</div>
+      <div id="online-badge">Online: <span id="online-count">1</span></div>
+    </div>
+
+    <!-- Emote bar -->
+    <div id="emote-bar">
+      <button data-emote="wave">👋</button>
+      <button data-emote="heart">💖</button>
+      <button data-emote="dance">💃</button>
+      <button data-emote="hug">🤗</button>
+      <button data-emote="kiss">😘</button>
+      <button data-emote="happy">😊</button>
+    </div>
+
+    <!-- Mobile joystick -->
+    <div id="joystick-zone">
+      <div id="joystick-base">
+        <div id="joystick-thumb"></div>
+      </div>
+    </div>
+
+    <!-- Chat -->
+    <div id="chat-container">
+      <div id="chat-messages"></div>
+      <div class="chat-input-row">
+        <input id="chat-input" type="text" placeholder="Say something cute..." maxlength="100" />
+        <button id="emote-toggle">😊</button>
+      </div>
+    </div>
+
+    <!-- Hint -->
+    <div id="hint">Drag to look · Joystick / WASD to move · Collect hearts 💖</div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
